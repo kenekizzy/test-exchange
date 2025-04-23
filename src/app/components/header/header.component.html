@@ -1,0 +1,11 @@
+<div class="exchange-type-selector">
+      <button 
+        [class.active]="exchangeType === 'buy'" 
+        (click)="toggleExchangeType('buy')"
+        class="exchange-btn">Buy</button>
+      <button 
+        [class.active]="exchangeType === 'sell'" 
+        (click)="toggleExchangeType('sell')"
+        class="exchange-btn">Sell</button>
+</div>
+<app-progress-bar></app-progress-bar>

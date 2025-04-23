@@ -1,0 +1,25 @@
+<div class="email-verification">
+  <h2>Enter Email Address to continue</h2>
+  
+  <form [formGroup]="emailForm" (ngSubmit)="nextStep()">
+    <div class="form-group">
+      <input 
+        type="email" 
+        formControlName="email" 
+        class="form-control"
+        placeholder="Enter your email">
+      <span class="copy-icon">⫽</span>
+    </div>
+    
+    <div class="button-group">
+      <button type="button" class="back-btn" (click)="goBack()">
+        <span class="arrow-icon">←</span>
+        Go Back
+      </button>
+      <button type="submit" class="next-btn" [disabled]="!emailForm.valid">
+        Next: Verify
+        <span class="arrow-icon">→</span>
+      </button>
+    </div>
+  </form>
+</div>

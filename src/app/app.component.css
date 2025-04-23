@@ -1,0 +1,40 @@
+
+ 
+.app-containerss {
+  padding: 20px;
+  background-color: #f5f5f5;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.exchange-container {
+  width: 100%;
+  max-width: 600px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.powered-by {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 12px;
+  color: #666;
+  padding: 20px 0;
+  border-top: 1px solid #f0f0f0;
+  margin-top: 20px;
+}
+
+.provider-logo {
+  width: 20px;
+  height: 20px;
+  font-size: 34px;
+  font-weight: 800;
+  color: #333;
+}

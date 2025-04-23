@@ -1,0 +1,55 @@
+<div class="transaction-review">
+  <h2>Review your transaction</h2>
+  <p class="subtitle">Please review the details of your order before submitting the request.</p>
+  
+  <div class="details-container">
+    <div class="detail-row">
+      <span>Send</span>
+      <span class="amount">
+        <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 256 256"
+        fill="none"
+      >
+        <rect width="256" height="256" rx="128" fill="#50AF95" />
+        <path
+          d="M140.73 116.38v-.01c23.75-.86 41.55-5.37 41.55-10.62s-17.8-9.76-41.55-10.62v-18.1h33.56V48H81.71v28.99h33.56v18.1c-23.74.86-41.53 5.36-41.53 10.62s17.79 9.76 41.53 10.62v34.41h25.96v-34.41zm0-21.03c19.95.85 34.66 3.82 34.66 7.41s-14.71 6.56-34.66 7.41v-14.82zm-25.96 14.82c-19.94-.85-34.64-3.82-34.64-7.41s14.7-6.56 34.64-7.41v14.82z"
+          fill="#fff"
+        />
+      </svg>
+        {{transactionDetails.send.toFixed(2)}} USDT
+      </span>
+    </div>
+    
+    <div class="detail-row">
+      <span>Provider fee</span>
+      <span>{{transactionDetails.fee.toFixed(2)}} USDT</span>
+    </div>
+    
+    <div class="detail-row">
+      <span>To Receive</span>
+      <span class="amount">
+        {{transactionDetails.receive.toFixed(2)}} KES
+        <button class="info-button">ⓘ</button>
+      </span>
+    </div>
+    
+    <div class="detail-row">
+      <span>Estimated arrival</span>
+      <span>
+        <img src="assets/lightning.png" alt="Fast" /> {{transactionDetails.estimatedArrival}}
+      </span>
+    </div>
+  </div>
+  
+  <div class="form-actions">
+    <button class="back-btn" (click)="goBack()">
+      <span class="arrow">←</span> Go Back
+    </button>
+    <button class="next-btn" (click)="proceedToPayment()">
+      Continue to Pay <span class="arrow">→</span>
+    </button>
+  </div>
+</div>

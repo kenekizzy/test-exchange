@@ -1,0 +1,77 @@
+.email-verification {
+  padding: 0 20px 20px;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #102A3A;
+  margin-bottom: 24px;
+}
+
+.form-group {
+  margin-bottom: 24px;
+  position: relative;
+}
+
+.form-control {
+  width: 100%;
+  padding: 14px;
+  font-size: 16px;
+  border: 1px solid #eaeaea;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-sizing: border-box;
+}
+
+.copy-icon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #102A3A;
+  cursor: pointer;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 40px;
+}
+
+.back-btn {
+  flex: 1;
+  padding: 16px;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  background-color: #f0f0f0;
+  color: #333;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.next-btn {
+  flex: 1;
+  padding: 16px;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  background-color: #102A3A;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.next-btn:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}

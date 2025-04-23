@@ -1,0 +1,85 @@
+<div class="exchange-form">
+  <div class="exchange-input">
+    <div class="label">You Pay</div>
+    <div class="input-group">
+      <input type="number" [(ngModel)]="inputAmount" (input)="updateOutputAmount()" class="amount-input">
+      <div class="currency-selector">
+        <div class="selected-currency">
+          <svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 256 256"
+  fill="none"
+>
+  <rect width="256" height="256" rx="128" fill="#50AF95" />
+  <path
+    d="M140.73 116.38v-.01c23.75-.86 41.55-5.37 41.55-10.62s-17.8-9.76-41.55-10.62v-18.1h33.56V48H81.71v28.99h33.56v18.1c-23.74.86-41.53 5.36-41.53 10.62s17.79 9.76 41.53 10.62v34.41h25.96v-34.41zm0-21.03c19.95.85 34.66 3.82 34.66 7.41s-14.71 6.56-34.66 7.41v-14.82zm-25.96 14.82c-19.94-.85-34.64-3.82-34.64-7.41s14.7-6.56 34.64-7.41v14.82z"
+    fill="#fff"
+  />
+</svg>
+          <span>{{ inputCurrency }}</span>
+          <span class="dropdown-arrow">▼</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="swap-icon">
+    <div class="swap-button">⇅</div>
+  </div>
+
+  <div class="exchange-output">
+    <div class="label">You receive</div>
+    <div class="input-group">
+      <input type="number" [(ngModel)]="outputAmount" disabled class="amount-input">
+      <div class="currency-selector">
+        <div class="selected-currency">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="24">
+            <text x="0" y="18" font-family="Arial, sans-serif" font-size="18" fill="black">KSh</text>
+          </svg>          
+          <span>{{ outputCurrency }}</span>
+          <span class="dropdown-arrow">▼</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="exchange-rate">
+    <span class="refresh-icon">⟳</span>
+    <span>1 {{ inputCurrency }} = {{ exchangeRate }} {{ outputCurrency }}</span>
+  </div>
+
+  <div class="payment-method">
+    <div class="label">Receive Funds in</div>
+    <div class="method-selector">
+      <div class="selected-method">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none">
+          <rect x="4" y="6" width="24" height="20" rx="3" fill="#5BC241"/>
+          <path d="M10 14h12v2H10v-2zm0 4h8v2h-8v-2z" fill="white"/>
+        </svg>        
+        <span>M-pesa</span>
+        <span class="dropdown-arrow">▼</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="transaction-details">
+    <div class="detail-row">
+      <span class="detail-label">Estimated Time</span>
+      <span class="detail-value">
+        <span class="lightning-icon">⚡</span>
+        {{ estimatedTime }} min
+      </span>
+    </div>
+    <div class="detail-row">
+      <span class="detail-label">Estimated Fee</span>
+      <span class="detail-value">{{ fee.toFixed(2) }} {{ inputCurrency }}</span>
+    </div>
+  </div>
+
+  <button class="next-btn" (click)="nextStep()">
+    Next: Provide Transfer Details
+    <span class="arrow-icon">→</span>
+  </button>
+</div>

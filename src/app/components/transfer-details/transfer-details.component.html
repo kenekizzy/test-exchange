@@ -1,0 +1,52 @@
+<div class="transfer-details">
+  <h2>Where do we pay you?</h2>
+  <p class="subtitle">Please provide details about the account we should send money to:</p>
+  
+  <form [formGroup]="detailsForm" (ngSubmit)="nextStep()">
+    <div class="form-group">
+      <label for="accountName">Account Name</label>
+      <input 
+        type="text" 
+        id="accountName" 
+        formControlName="accountName" 
+        class="form-control"
+        placeholder="Enter account name">
+      <span class="copy-icon">⫽</span>
+    </div>
+    
+    <div class="form-group">
+      <label for="phoneNumber">Phone Number</label>
+      <div class="phone-input">
+        <div class="country-code">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="24" viewBox="0 0 3 2">
+            <rect width="3" height="2" fill="#060"/>
+            <rect width="3" height="1.33" fill="#fff"/>
+            <rect width="3" height="0.67" fill="#000"/>
+            <path d="M1.5 0.3c.3.3.3 1.1 0 1.4-.3-.3-.3-1.1 0-1.4z" fill="#fff"/>
+            <circle cx="1.5" cy="1" r="0.2" fill="#be0027"/>
+          </svg>          
+          <span>+254</span>
+          <span class="dropdown-arrow">▼</span>
+        </div>
+        <input 
+          type="tel" 
+          id="phoneNumber" 
+          formControlName="phoneNumber" 
+          class="form-control phone"
+          placeholder="Enter phone number">
+        <span class="copy-icon">⫽</span>
+      </div>
+    </div>
+    
+    <div class="button-group">
+      <button type="button" class="back-btn" (click)="goBack()">
+        <span class="arrow-icon">←</span>
+        Go Back
+      </button>
+      <button type="submit" class="next-btn" [disabled]="!detailsForm.valid">
+        Continue
+        <span class="arrow-icon">→</span>
+      </button>
+    </div>
+  </form>
+</div>

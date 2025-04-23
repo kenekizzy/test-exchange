@@ -1,0 +1,10 @@
+<div class="progress-bar">
+  <div class="progress-steps">
+    <div 
+      *ngFor="let step of steps; let i = index" 
+      class="step" 
+      [class.completed]="i < currentStep">
+      <div class="step-icon" *ngIf="i < currentStep">✓</div>
+    </div>
+  </div>
+</div>

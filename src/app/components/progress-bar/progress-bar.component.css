@@ -1,0 +1,39 @@
+.progress-bar {
+  padding: 0 20px;
+  margin-bottom: 24px;
+}
+
+.progress-steps {
+  display: flex;
+  width: 100%;
+  gap: 4px;
+  height: 8px;
+}
+
+.step {
+  flex: 1;
+  height: 8px;
+  background-color: #EEEEEE;
+  border-radius: 4px;
+  position: relative;
+}
+
+.step.completed {
+  background-color: #102A3A;
+}
+
+.step-icon {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  width: 24px;
+  height: 24px;
+  background: #102A3A;
+  border-radius: 50%;
+  margin-right: 5px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}

@@ -1,0 +1,133 @@
+.payment-completion {
+  padding: 16px 24px 24px;
+  text-align: center;
+}
+
+.payment-amount {
+  margin: 24px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.copy-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 8px;
+}
+
+.timer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 24px;
+  font-size: 14px;
+  color: grey;
+}
+
+.timer img {
+  margin-right: 8px;
+}
+
+.wallet-details {
+  margin-bottom: 24px;
+}
+
+.value-with-copy {
+  display: flex;
+  align-items: center;
+}
+
+.ellipsis {
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.network-badge {
+  display: flex;
+  align-items: center;
+  padding: 4px 12px;
+  background-color: #f3f4f6;
+  border-radius: 16px;
+}
+
+.network-badge img {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+}
+
+.warning-box {
+  display: flex;
+  padding: 16px;
+  background-color: #fffbeb;
+  border: 1px solid #fef3c7;
+  align-items: center;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  text-align: left;
+}
+
+.warning-box svg {
+  width: 24px;
+  height: 24px;
+  margin-right: 20px;
+  flex-shrink: 0;
+  color:rgb(240, 214, 112);
+}
+
+.warning-box p {
+  font-size: 14px;
+  color: #92400e;
+}
+
+.qr-section {
+  margin-bottom: 24px;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  border: 1px solid #e5e7eb;
+  padding: 16px;
+  border-radius: 8px;
+  background-color: #f9fafb;
+}
+
+.qr-section p {
+  margin-bottom: 16px;
+  font-size: 14px;
+  color: #4b5563;
+}
+
+.qr-code {
+  display: flex;
+  justify-content: center;
+}
+
+.qr-code img {
+  width: 200px;
+  height: 200px;
+}
+
+.cancel-button {
+  width: 100%;
+  padding: 14px;
+  background-color: #e77272;
+  color:#b82b2b;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 16px;
+  cursor: pointer;
+}
