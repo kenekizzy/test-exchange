@@ -21,7 +21,7 @@ export interface ExchangeData {
 })
 
 export class ExchangeServiceService {
-  private currentStep = new BehaviorSubject<number>(6);
+  private currentStep = new BehaviorSubject<number>(1);
   private totalSteps = 6;
 
   private exchangeData: ExchangeData = {
